@@ -1,0 +1,12 @@
+[
+  {
+    "key": "ecocode-rules/avoid-try-catch-finally",
+    "name": "Avoid using try-catch-finally statement",
+    "url": "https://github.com/nduheron/ecocode_eslint_plugin/blob/main/ecocode-rules/docs/rules/avoid-try-catch-finally.md",
+    "type": "CODE_SMELL",
+    "severity": "MINOR",
+    "tags": [
+      "eco-conception"
+    ]
+  }
+]

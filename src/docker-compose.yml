@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   sonar:
-    image: sonarqube:latest
+    image: sonarqube:8-community
     ports:
       - "9000:9000"
     networks:
@@ -26,6 +26,9 @@ services:
       - type: bind
         source: ./android-plugin/target/ecoCode-rules-1.0-SNAPSHOT.jar
         target: /opt/sonarqube/extensions/plugins/ecoCode-rules-1.0-SNAPSHOT.jar
+      - type: bind
+        source: ./javascript-plugin/target/ecocode-javascript-plugin-1.0.0-SNAPSHOT.jar
+        target: /opt/sonarqube/extensions/plugins/ecocode-javascript-plugin-1.0.0-SNAPSHOT.jar
       # - "conf:/opt/sonarqube/conf"
       - "extensions:/opt/sonarqube/extensions"
       - "logs:/opt/sonarqube/logs"
